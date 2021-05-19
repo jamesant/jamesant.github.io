@@ -16,25 +16,27 @@
   </head>
 
   <body>
+    <nav>
+      {% for nav_page in site.data.nav_pages.pages %}
+        {% capture nav_page_url %}{{ site.baseurl }}/{{ nav_page.rel_url }}{% endcapture %}
+        {% if page.url == nav_page_url %}
+            <a href="{{ nav_page_url }}" class="active">{{ nav_page.title }}</a></li>
+        {% else %}
+            <a href="{{ nav_page_url }}">{{ nav_page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </nav>
+    
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
           <div class="site-info">
             <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
           </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Home</a>
-            <a href="{{ site.baseurl }}/written">Written</a>
-            <a href="{{ site.baseurl }}/unwritten">Unwritten</a>
-            <a href="{{ site.baseurl }}/projects">Projects</a>
-            <a href="{{ site.baseurl }}/recommendations">Recommendations</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
         </header>
       </div>
     </div>
+    
 
     <div id="main" role="main" class="container">
       {{ content }}

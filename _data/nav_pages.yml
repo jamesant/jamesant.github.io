@@ -1,0 +1,14 @@
+pages:
+  - title: Home
+    rel_url: 
+  - title: Written
+    rel_url: written/
+  - title: Unwritten
+    rel_url: unwritten/
+  - title: Projects
+    rel_url: projects
+  - title: Recommendations
+    rel_url: recommendations/
+  - title: About
+    rel_url: about/
+    

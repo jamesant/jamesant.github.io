@@ -211,35 +211,67 @@ img {
 }
 
 nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  margin: 0;
+  margin-top: 160px;
+  padding: 0;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
   font-family: $helveticaNeue;
   font-size: 18px;
-
+  float:left;
+  
   @include mobile {
     float: none;
     margin-top: 9px;
     display: block;
     font-size: 16px;
+    position: relative;
+    height: auto;
   }
-
+  
   a {
-    margin-left: 20px;
+    display: block;
+    padding-left: 80px;
+    width: 280px;
     color: $darkGray;
-    text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
-
-    @include mobile {
+    
+     @include mobile {
+      display: inline;
       margin: 0 10px;
+      padding: 0;
       color: $blue;
     }
+  }
+  
+  a.active {
+  /* fixme */
+    background-color: $blue;
   }
 }
 
 //
 // .main
 //
+
+#main {
+  margin-left: 280px; //matches nav
+  width: auto;
+  @include mobile {
+    margin-left: 0;
+  }
+}
+
+.posts > .entry-title {
+}
+.posts > .title {
+  float: left;
+}
+.posts > .date {
+  float: right;
+}
 
 .posts > .post {
   padding-bottom: 2em;

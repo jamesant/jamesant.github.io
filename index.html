@@ -5,10 +5,11 @@ layout: default
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
+      <div class="entry-title">
+        <h1 class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <h2 class="date">{{ post.date }}</h2>
+      </div>
+      <div class="entry clearfix">
         {{ post.excerpt }}
       </div>
 
