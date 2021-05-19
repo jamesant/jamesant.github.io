@@ -20,33 +20,23 @@
 
 title: Your awesome title
 name: James Anthony
-email: your-email@example.com
+email: &email james@jameseanthony.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://www.jameseanthony.com # the base hostname & protocol for your site, e.g. http://example.com (Used for Sitemap.xml and  RSS feed)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
-twitter_username: jekyllrb
-github_username:  jamesant
 
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  dribbble:
-  email:
-  facebook:
-  flickr:
+  email: *email
   github: jamesant
-  instagram:
-  linkedin:
-  pinterest:
-  rss: # just type anything here for a working RSS icon
-  twitter: jekyllrb
+  linkedin: jameseanthony
+  rss: yes
+  twitter: JamesAn34127990
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
