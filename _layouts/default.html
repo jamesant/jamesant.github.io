@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <title>{% if page.title %}{{ page.title | smartify}} – {% endif %}{{ site.name | smartify}} – {{ site.description | smartify}}</title>
 
     {% include meta.html %}
 
@@ -21,9 +21,9 @@
         {% for nav_page in site.data.nav_pages.pages %}
           {% capture nav_page_url %}{{ site.baseurl }}/{{ nav_page.rel_url }}{% endcapture %}
           {% if page.url == nav_page_url %}
-              <a href="{{ nav_page_url }}" class="active">{{ nav_page.title }}</a></li>
+              <a href="{{ nav_page_url }}" class="active">{{ nav_page.title | smartify}}</a></li>
           {% else %}
-              <a href="{{ nav_page_url }}">{{ nav_page.title }}</a></li>
+              <a href="{{ nav_page_url }}">{{ nav_page.title | smartify}}</a></li>
           {% endif %}
         {% endfor %}
       </nav>
@@ -36,7 +36,7 @@
       <div class="container">
         <header class="masthead clearfix">
           <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name | smartify}}</a></h1>
           </div>
         </header>
       </div>
