@@ -26,7 +26,7 @@ body {
 .container {
   margin: 0 auto;
   max-width: 740px;
-  padding: 0 10px;
+  padding: 0 48px;
   width: 100%;
 }
 
@@ -115,9 +115,16 @@ img {
   max-width: none;
 }
 
+.title {
+margin:0;
+}
+
 .date {
-  font-style: italic;
+  font-size: 22px;
+  line-height: 51px;
+  font-weight: normal;
   color: $gray;
+  margin: 0;
 }
 
 // Specify the color of the selection
@@ -128,6 +135,10 @@ img {
 ::selection {
   color: $black;
   background: $lightGray;
+}
+
+.clearfix {
+  clear: both;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -151,33 +162,12 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 48px;
+  padding-top: 48px;
 }
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
-
-  @include mobile {
-    text-align: center;
-  }
-}
-
-.site-avatar {
-  float: left;
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
-  img {
-    border-radius: 5px;
-  }
 }
 
 .site-info {
@@ -195,8 +185,8 @@ img {
   color: $darkGray;
   cursor: pointer;
   font-family: $helveticaNeue;
-  font-weight: 300;
-  font-size: 28px;
+  font-weight: bold;
+  font-size: 32px;
   letter-spacing: 1px;
 }
 
@@ -220,6 +210,7 @@ img {
   font-size: 18px;
   float:left;
   width: 280px;
+  border-right: 0.5px solid $darkGray;
 
   @include mobile {
     float: none;
@@ -228,6 +219,8 @@ img {
     font-size: 16px;
     position: relative;
     height: auto;
+    border-right: none;
+    width: 100%;
   }
 }
 
@@ -236,9 +229,9 @@ nav {
 
   a {
     display: block;
-    padding-left: 80px;
+    padding-left: 60px;
     color: $darkGray;
-    font-weight: 300;
+    font-weight: 600;
     letter-spacing: 1px;
     
      @include mobile {
@@ -269,15 +262,16 @@ nav {
 }
 
 #content {
-  padding: 0 10px;
+  padding: 0 48px;
 }
 
 .posts > .entry-title {
 }
-.posts > .title {
+
+.entry-title > .title {
   float: left;
 }
-.posts > .date {
+.entry-title > .date {
   float: right;
 }
 

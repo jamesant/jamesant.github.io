@@ -7,7 +7,8 @@ layout: default
     <article class="post">
       <div class="entry-title">
         <h1 class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-        <h2 class="date">{{ post.date }}</h2>
+        <h2 class="date">{{ post.date | date: "%B %-d, %Y" }}</h2>
+        <div class="clearfix"></div>
       </div>
       <div class="entry clearfix">
         {{ post.excerpt }}
