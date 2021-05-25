@@ -118,12 +118,16 @@ img {
 margin:0;
 }
 
+/*FIXME: line-height hax set to equal h1 so it aligns nicely w/ post title*/
 .date {
   font-size: 22px;
   line-height: 51px;
   font-weight: normal;
   color: $gray;
   margin: 0;
+  @include mobile {
+    line-height: 42px;
+  }
 }
 
 // Specify the color of the selection
